@@ -1,8 +1,6 @@
-package com.cm.graph;
+package com.cm.graph.digraph;
 
 import org.junit.Test;
-
-import java.util.Iterator;
 
 /**
  * @author CM cmpara@foxmail.com
@@ -21,8 +19,7 @@ public class TopologicalTest {
 
     @Test
     public void testTopological1() {
-        Topological topological = new Topological(initGraph());
-        Iterable<Integer> order = topological.getTopological(initGraph());
+        Iterable<Integer> order = Topological.getTopological(initGraph());
         for (Integer integer : order) {
             System.out.println(integer);
         }

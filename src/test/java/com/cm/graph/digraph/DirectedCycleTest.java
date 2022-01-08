@@ -1,4 +1,4 @@
-package com.cm.graph;
+package com.cm.graph.digraph;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.cm.graph;
+package com.cm.graph.digraph;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class Digraph {
 
     public Digraph reverse() {
         Digraph reverse = new Digraph(vertexes);
-        for (int i = 0; i < edges; i++) {
+        for (int i = 0; i < vertexes; i++) {
             for (Integer end : adj(i)) {
                 reverse.addEdge(end, i);
             }
@@ -58,7 +58,7 @@ public class Digraph {
 
     public Digraph copy() {
         Digraph copy = new Digraph(vertexes);
-        for (int i = 0; i < edges; i++) {
+        for (int i = 0; i < vertexes; i++) {
             for (Integer end : adj(i)) {
                 copy.addEdge(i, end);
             }

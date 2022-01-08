@@ -1,4 +1,4 @@
-package com.cm.graph;
+package com.cm.graph.digraph;
 
 import java.util.ArrayList;
 import java.util.List;
