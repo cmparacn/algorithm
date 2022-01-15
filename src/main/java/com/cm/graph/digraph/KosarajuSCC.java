@@ -11,11 +11,7 @@ public class KosarajuSCC {
     private int count = 0;
 
     /**
-     * <p>
-     *
-     * </P>
-     *
-     * @param digraph 有向图
+      @param digraph 有向图
      */
     public KosarajuSCC(Digraph digraph) {
         visited = new boolean[digraph.getVertexes()];
