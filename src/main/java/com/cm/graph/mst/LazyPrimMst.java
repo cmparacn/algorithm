@@ -41,7 +41,7 @@ public class LazyPrimMst {
      * @param graph 无向加权图
      * @param cur   当前节点
      */
-    public void visit(WeightedGraph graph, int cur) {
+    private void visit(WeightedGraph graph, int cur) {
         if (marked[cur]) {
             return;
         }

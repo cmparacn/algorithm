@@ -2,7 +2,6 @@ package com.cm.graph.mst;
 
 import edu.princeton.cs.introcs.In;
 
-import java.io.DataInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
