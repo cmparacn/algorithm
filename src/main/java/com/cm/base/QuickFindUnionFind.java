@@ -9,7 +9,7 @@ public class QuickFindUnionFind extends UnionFind {
     private final int[] id;
 
     public QuickFindUnionFind(int count) {
-        this.count = count;
+        super(count);
         this.id = new int[count];
         for (int i = 0; i < count; i++) {
             id[i] = i;

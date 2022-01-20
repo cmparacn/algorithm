@@ -6,6 +6,10 @@ package com.cm.base;
  */
 public abstract class UnionFind {
 
+    public UnionFind(int count) {
+        this.count = count;
+    }
+
     protected int count;
 
     /**
