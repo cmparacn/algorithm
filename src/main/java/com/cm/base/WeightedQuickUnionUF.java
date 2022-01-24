@@ -37,10 +37,18 @@ public class WeightedQuickUnionUF extends UnionFind{
         int pRoot = find(p);
         int qRoot = find(q);
         // 根 root 一致
-        if (pRoot != qRoot) {
-            id[pRoot] = qRoot;
-            count--;
+        if (pRoot == qRoot) {
+            return;
         }
+        // 小树接在大树
+        if (depth[pRoot] < depth[qRoot]) {
+            id[pRoot] = id[qRoot];
+            depth[pRoot] += depth[qRoot];
+        } else {
+            id[qRoot] = id[pRoot];
+            depth[qRoot] += depth[pRoot];
+        }
+
     }
 
     /**
