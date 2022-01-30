@@ -18,6 +18,9 @@ public class PrimMst {
      * 树外节点和树内的最短边, 当在树内时, null
      */
     private final Edge[] edgeTo;
+    /**
+     * 树外节点到树的距离, 默认为 max
+     */
     private final double[] distTo;
     private final List<Edge> mst;
     private final PriorityQueue<Edge> minPQ;
@@ -60,7 +63,7 @@ public class PrimMst {
             int other = edge.other(cur);
             if (!marked[other] && edge.getWeight() < distTo[other]) {
                 distTo[other] = edge.getWeight();
-                // 当前节点已在 minQueue 中右边, 将其进行更新 (remove & add)
+                // 当前节点已在 minQueue 中, 将其进行更新 (remove & add)
                 if (edgeTo[other] != null) {
                     minPQ.remove(edgeTo[other]);
                 }
