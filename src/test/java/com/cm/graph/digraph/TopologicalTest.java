@@ -1,5 +1,6 @@
 package com.cm.graph.digraph;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -10,23 +11,20 @@ public class TopologicalTest {
 
     @Test
     public void testTopological() {
-        Topological topological = new Topological(initGraph());
+        Topological topological = new DfsTopological(initGraph());
         Iterable<Integer> order = topological.order();
-        for (Integer integer : order) {
-            System.out.println(integer);
-        }
+
     }
 
     @Test
     public void testTopological1() {
-        Iterable<Integer> order = Topological.getTopological(initGraph());
-        for (Integer integer : order) {
-            System.out.println(integer);
-        }
+        Topological topological = new InDegreeTopological(initGraph());
+        Iterable<Integer> order = topological.order();
+        Assert.assertNotNull(order);
     }
 
 
-    private Digraph initGraph(){
+    private Digraph initGraph() {
         Digraph digraph = new Digraph(13);
         digraph.addEdge(0, 1);
         digraph.addEdge(0, 5);
